@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>План Меню</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .button-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 10px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .menu-plan {
+            display: none;
+        }
+        .menu-plan.active {
+            display: block;
+        }
+        .day {
+            margin-bottom: 20px;
+            border-left: 3px solid #4CAF50;
+            padding-left: 15px;
+        }
+        .day h3 {
+            margin-top: 0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .notes {
+            font-size: 0.9em;
+            color: #666;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>План Меню</h1>
+
+        <div class="button-container">
+            <button class="button" onclick="showMenu('man')">Мужчина 90 кг</button>
+            <button class="button" onclick="showMenu('woman')">Женщина 63 кг</button>
+        </div>
+
+        <div id="man" class="menu-plan">
+            <h2>ВЕРСИЯ A — МУЖЧИНА 90 кг</h2>
+            <p class="notes">(масло — extra virgin; если нельзя и его — замени 1:1 на масло авокадо или высокоолеиновое подсолнечное)</p>
+
+            <div class="day">
+                <h3>День 1 (~1 100 ккал, белок ≤20–22 г)</h3>
+                <ul>
+                    <li><strong>T+6:00</strong> Овсянка на воде 120 г (готов.) + черника 120 г + оливковое 20 г + макадамия 15 г.</li>
+                    <li><strong>T+8:00</strong> Кабачок запеч. 300 г + брокколи запеч. 200 г + авокадо 100 г + оливковое 15 г.</li>
+                    <li><strong>T+10:30</strong> Морковь запеч. 250 г + рисовые хлебцы 2 шт (~70 ккал) + оливковое 10 г.</li>
+                </ul>
+            </div>
+
+            <div class="day">
+                <h3>День 2 (≈780 ккал, белок ≤16–18 г)</h3>
+                <ul>
+                    <li><strong>T+6:00</strong> Овсянка 120 г + черника 80 г + оливковое 10 г.</li>
+                    <li><strong>T+8:00</strong> Брокколи 200 г + кабачок 250 г + оливковое 15 г.</li>
+                    <li><strong>T+10:30</strong> Морковь 250 г + макадамия 10 г + оливковое 10 г + рисовый хлебец 1 шт.</li>
+                </ul>
+            </div>
+
+            <div class="day">
+                <h3>День 3 (≈780 ккал)</h3>
+                <ul>
+                    <li><strong>T+6:00</strong> Гречка отварная 100 г + огурец 200 г (комн. t°) + авокадо 60 г + оливковое 5 г.</li>
+                    <li><strong>T+8:00</strong> Кабачок 300 г + морковь 200 г + оливковое 10 г.</li>
+                    <li><strong>T+10:30</strong> Овсянка 120 г + печёное яблоко 120 г + оливковое 10 г + макадамия 10 г.</li>
+                </ul>
+            </div>
+
+            <div class="day">
+                <h3>День 4 (≈790 ккал)</h3>
+                <ul>
+                    <li><strong>T+6:00</strong> Брокколи 200 г + кабачок 250 г + оливковое 10 г.</li>
+                    <li><strong>T+8:00</strong> Овсянка 120 г + черника 80 г + авокадо 50 г + оливковое 5 г.</li>
+                    <li><strong>T+10:30</strong> Кабачок 220 г + рисовые хлебцы 2 шт + макадамия 10 г + оливковое 10 г.</li>
+                </ul>
+            </div>
+
+            <div class="day">
+                <h3>День 5 (≈780–800 ккал)</h3>
+                <ul>
+                    <li><strong>T+6:00</strong> Кабачок 300 г + брокколи 150 г + оливковое 10 г.</li>
+                    <li><strong>T+8:00</strong> Овсянка 120 г + печёное яблоко 120 г + макадамия 10 г.</li>
+                    <li><strong>T+10:30</strong> Морковь 250 г + огурец 200 г + авокадо 60 г + оливковое 10 г.</li>
+                </ul>
+            </div>
+
+            <div class="day">
+                <h3>День 6 — выход (+300–500 ккал; белок 35–45 г)</h3>
+                <ul>
+                    <li><strong>T+6:00</strong> Без калорий (вода маленькими глотками).</li>
+                    <li><strong>T+7:00</strong> Индейка/курица 150 г (тёплая, свежая) + кабачок 250 г + оливковое 10 г.</li>
+                    <li><strong>T+10:00</strong> Гречка 120 г + морковь 220 г + оливковое 10 г.</li>
+                    <li><strong>T+12:30</strong> Руккола/салат 80 г + моцарелла/страчателла 70 г + рисовый хлебец 1–2 шт + оливковое 5–10 г.</li>
+                    <li><strong>Десерт (1×/день):</strong> пастила 20–40 г.</li>
+                </ul>
+            </div>
+
+            <div class="day">
+                <h3>День 7 — выход (+300–400 ккал; белок 65–85 г)</h3>
+                <ul>
+                    <li><strong>T+7:00</strong> Яйца 2 шт или моцарелла 90 г + огурец/руккола 40–60 г + оливковое 10 г.</li>
+                    <li><strong>T+10:00</strong> Белая рыба (дорадо/хек) 180–200 г + гречка 120 г + брокколи 150 г + оливковое 10 г.</li>
+                    <li><strong>T+13:00</strong> Овсянка 150 г + черника 80 г + макадамия 10 г.</li>
+                    <li><strong>Опц. десерт:</strong> пастила 1 шт после T+10:00.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="woman" class="menu-plan">
+            <h2>Женщина 63 кг — FMD «овощная» (без оливок)</h2>
+            <p class="notes">Если оливковое масло нельзя: замени 1:1 на масло авокадо или высокоолеиновое подсолнечное. Все каши — на воде, без сахара. Соль — щепотка по вкусу.</p>
+
+            <div class="day">
+                <h3>День 1 (цель ~970–980 ккал; белок ≤18–20 г)</h3>
+                <ul>
+                    <li><strong>T+6:00</strong> Овсянка, готовая 120 г + черника 100 г + оливковое масло 15 г + макадамия 10 г.</li>
+                    <li><strong>T+8:00</strong> Кабачок запечённый 300 г + брокколи запечённая 150 г + авокадо 80 г + оливковое масло 15 г.</li>
+                    <li><strong>T+10:30</strong> Морковь запечённая 250 г + рисовые хлебцы 2 шт (~35 ккал/шт) + оливковое масло 10 г.</li>
+                    <li><strong>Итог дня:</strong> ≈980 ккал; белок ~15–16 г.</li>
+                </ul>
+            </div>
+
+            <div class="day">
+                <h3>День 2 (цель ~650–680 ккал; белок ≤15–18 г)</h3>
+                <ul>
+                    <li><strong>T+6:00</strong> Овсянка, готовая 100 г + черника 60 г + оливковое масло 10 г.</li>
+                    <li><strong>T+8:00</strong> Кабачок 250 г + брокколи 150 г + авокадо 50 г + оливковое масло 10 г.</li>
+                    <li><strong>T+10:30</strong> Морковь 220 г + макадамия 10 г + оливковое масло 5 г.</li>
+                    <li><strong>Итог дня:</strong> ≈670–675 ккал; белок ~12–13 г.</li>
+                </ul>
+            </div>
+
+            <div class="day">
+                <h3>День 3 (цель ~650–680 ккал)</h3>
+                <ul>
+                    <li><strong>T+6:00</strong> Гречка, готовая 80 г + огурец 200 г (комнатной t°) + авокадо 50 г + оливковое масло 5 г.</li>
+                    <li><strong>T+8:00</strong> Кабачок 300 г + морковь 200 г + оливковое масло 10 г.</li>
+                    <li><strong>T+10:30</strong> Овсянка 100 г + яблоко печёное 120 г + оливковое масло 5 г + макадамия 6 г.</li>
+                    <li><strong>Итог дня:</strong> ≈675–685 ккал; белок ~11–12 г.</li>
+                </ul>
+            </div>
+
+            <div class="day">
+                <h3>День 4 (цель ~650–680 ккал)</h3>
+                <ul>
+                    <li><strong>T+6:00</strong> Брокколи 150 г + кабачок 220 г + оливковое масло 10 г.</li>
+                    <li><strong>T+8:00</strong> Овсянка 100 г + черника 60 г + авокадо 40 г + оливковое масло 5 г.</li>
+                    <li><strong>T+10:30</strong> Кабачок 220 г + рисовые хлебцы 2 шт + макадамия 8 г + оливковое масло 10 г.</li>
+                    <li><strong>Итог дня:</strong> ≈660–670 ккал; белок ~12–13 г.</li>
+                </ul>
+            </div>
+
+            <div class="day">
+                <h3>День 5 (цель ~650–680 ккал)</h3>
+                <ul>
+                    <li><strong>T+6:00</strong> Кабачок 250 г + брокколи 120 г + оливковое масло 10 г.</li>
+                    <li><strong>T+8:00</strong> Овсянка 100 г + яблоко печёное 120 г + макадамия 8 г + оливковое масло 5 г.</li>
+                    <li><strong>T+10:30</strong> Морковь 220 г + огурец 200 г + авокадо 50 г + оливковое масло 5 г.</li>
+                    <li><strong>Итог дня:</strong> ≈660–670 ккал; белок ~12–13 г.</li>
+                </ul>
+            </div>
+
+             <div class="day">
+                <h3>День 6 — выход (ещё +300–450 ккал; белок ~30–40 г)</h3>
+                <ul>
+                    <li><strong>T+6:00</strong> — вода без калорий.</li>
+                    <li><strong>T+7:00</strong> — индейка/курица 120–130 г + кабачок 250 г + оливковое масло 10 г.</li>
+                    <li><strong>T+10:00</strong> — гречка 100–120 г + морковь 200–220 г + оливковое масло 10 г.</li>
+                    <li><strong>T+12:30</strong> — салат/руккола 80 г + моцарелла/страчателла 60–70 г + рисовый хлебец 1 шт + оливковое 5–10 г.</li>
+                    <li><strong>Десерт (1×/день):</strong> пастила белёвская 20–30 г.</li>
+                </ul>
+            </div>
+
+            <div class="day">
+                <h3>День 7 — выход (ещё +300–400 ккал; белок ~55–70 г)</h3>
+                <ul>
+                    <li><strong>T+7:00</strong> — яйца 2 шт или моцарелла 80–90 г + зелень/огурец 40–60 г + оливковое 10 г.</li>
+                    <li><strong>T+10:00</strong> — белая рыба (дорадо/хек) 150–180 г + гречка 100–120 г + брокколи 150 г + оливковое 10 г.</li>
+                    <li><strong>T+13:00</strong> — овсянка 150 г + черника 80 г + макадамия 10 г.</li>
+                    <li><strong>Опц. десерт:</strong> пастила 1 шт после T+10:00.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showMenu(menuId) {
+            var i;
+            var menus = document.getElementsByClassName("menu-plan");
+            for (i = 0; i < menus.length; i++) {
+                menus[i].style.display = "none";
+            }
+            document.getElementById(menuId).style.display = "block";
+        }
+        // По умолчанию показываем первый план
+        document.getElementById('man').style.display = 'block';
+    </script>
+
+</body>
+</html>
